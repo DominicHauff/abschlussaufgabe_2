@@ -1,7 +1,14 @@
 package game.entities;
 
-public abstract class Player {
-    private int hp;
-    private boolean isAlive;
+import game.GameClass;
 
+public class Player {
+    private int hp;
+    private int focusPoints;
+    private boolean isAlive;
+    private final GameClass gameClass;
+
+    public Player(GameClass gameClass) {
+        this.gameClass = gameClass;
+    }
 }
