@@ -1,4 +1,4 @@
-package game.pieces;
+package game.material;
 
 public class Deck {
 }
