@@ -3,20 +3,17 @@ package game;
 import game.material.Deck;
 
 import java.util.Stack;
+import java.util.stream.IntStream;
 
-public abstract class Level {
+public class Level {
     private final int levelNumber;
-    private final Deck cards;
-    private final Stack<Stage> stages;
+    private Deck cards;
+    private Stack<Stage> stages;
 
     public Level(int levelNumber, int numOfStages) {
         this.levelNumber = levelNumber;
-        setStages(numOfStages);
-    }
-
-    private void setStages(int numOfStages) {
-        for (int i = 0; i < numOfStages; i++) {
-            this.stages.add(new Stage());
-        }
+        this.cards = new Deck();
+        this.stages = new Stack<>();
+        IntStream.range(1, numOfStages).forEach(i -> stages.add(new Stage()));
     }
 }
