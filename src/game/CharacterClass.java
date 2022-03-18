@@ -1,8 +1,8 @@
 package game;
 
-import game.material.cards.Card;
-import game.material.cards.Focus;
-import game.material.cards.Water;
+import game.material.cards.abilities.PlayerAbilityCard;
+import game.material.cards.abilities.playerCards.Focus;
+import game.material.cards.abilities.playerCards.offense.magic.Water;
 
 import java.util.List;
 
@@ -11,15 +11,15 @@ public enum CharacterClass {
     WARRIOR (new Focus(), new Water()),
     PALADIN (new Focus(), new Water());
 
-    private final Card first;
-    private final Card second;
+    private final PlayerAbilityCard first;
+    private final PlayerAbilityCard second;
 
-    CharacterClass(Card first, Card second) {
+    CharacterClass(PlayerAbilityCard first, PlayerAbilityCard second) {
         this.first = first;
         this.second = second;
     }
 
-    public List<Card> getCards() {
+    public List<PlayerAbilityCard> getCards() {
         return List.of(this.first, this.second);
     }
 }

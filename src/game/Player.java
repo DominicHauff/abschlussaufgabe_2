@@ -1,7 +1,6 @@
-package game.entities;
+package game;
 
-import game.CharacterClass;
-import game.material.cards.Card;
+import game.material.cards.abilities.PlayerAbilityCard;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,7 +10,7 @@ public class Player {
     private int focusPoints;
     private boolean isAlive;
     private final CharacterClass characterClass;
-    private Map<String, Card> abilities;
+    private Map<String, PlayerAbilityCard> abilities;
 
     public Player(CharacterClass characterClass) {
         this.hp = 50;
