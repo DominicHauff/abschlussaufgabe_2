@@ -1,13 +1,13 @@
 package game.material.cards.abilities.shared;
 
-import game.EnemyClass;
+import game.entities.EnemyClass;
 import game.material.cards.Effect;
 import game.material.cards.abilities.AbilityCard;
 import game.material.cards.abilities.DamageType;
-import game.material.cards.abilities.MagicEnemyCard;
+import game.material.cards.abilities.EnemyCard;
 import game.material.cards.abilities.MagicPlayerCard;
 
-public class Water extends AbilityCard implements MagicEnemyCard, MagicPlayerCard {
+public class Water extends AbilityCard implements EnemyCard, MagicPlayerCard {
     private static final String NAME = "Water";
     private static final int COST = 1;
     private static final Effect EFFECT = new Effect();

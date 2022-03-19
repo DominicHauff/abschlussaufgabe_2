@@ -1,4 +1,4 @@
-package game;
+package game.entities;
 
 import game.material.cards.abilities.AbilityCard;
 import game.material.cards.abilities.shared.Focus;

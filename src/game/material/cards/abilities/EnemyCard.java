@@ -1,5 +1,5 @@
 package game.material.cards.abilities;
 
-public interface MagicEnemyCard {
+public interface EnemyCard {
     int getCost(int level);
 }

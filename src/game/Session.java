@@ -1,5 +1,7 @@
 package game;
 
+import game.entities.CharacterClass;
+import game.entities.Player;
 import game.io.InitSequence;
 import game.io.Messages;
 import game.material.PlayerAbilityCardSupplier;
@@ -28,7 +30,6 @@ public class Session {
         if (this.runa == null) return;
         while (runa.checkLife() && !levels.isEmpty()) {
             Level currentLevel = this.levels.pop();
-
         }
     }
 

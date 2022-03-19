@@ -1,10 +1,10 @@
 package game.material.cards.abilities.shared;
 
 import game.material.cards.abilities.AbilityCard;
-import game.material.cards.abilities.MagicEnemyCard;
+import game.material.cards.abilities.EnemyCard;
 import game.material.cards.abilities.MagicPlayerCard;
 
-public class Lightning extends AbilityCard implements MagicEnemyCard, MagicPlayerCard {
+public class Lightning extends AbilityCard implements EnemyCard, MagicPlayerCard {
     private static final String NAME = "Lightning";
     private static final int COST = 1;
 

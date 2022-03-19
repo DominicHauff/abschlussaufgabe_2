@@ -1,7 +1,7 @@
 package game.material.cards;
 
-import game.EnemyClass;
-import game.Entity;
+import game.entities.EnemyClass;
+import game.entities.Entity;
 import game.material.cards.abilities.DamageType;
 
 import java.util.List;

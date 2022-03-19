@@ -1,7 +1,6 @@
-package game;
+package game.entities;
 
 import game.material.cards.abilities.AbilityCard;
-import game.material.cards.abilities.MagicPlayerCard;
 
 import java.util.HashMap;
 import java.util.Map;

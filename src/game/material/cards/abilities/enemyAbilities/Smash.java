@@ -1,9 +1,11 @@
 package game.material.cards.abilities.enemyAbilities;
 
 import game.material.cards.abilities.AbilityCard;
+import game.material.cards.abilities.EnemyCard;
 
-public class Smash extends AbilityCard {
+public class Smash extends AbilityCard implements EnemyCard {
     private static final String NAME = "Smash";
+    private static final int COST = 1;
 
     @Override
     public String getName() {
@@ -18,5 +20,10 @@ public class Smash extends AbilityCard {
     @Override
     public void setAbilityLevel(int abilityLevel) {
         this.abilityLevel = abilityLevel;
+    }
+
+    @Override
+    public int getCost(int level) {
+        return COST * level;
     }
 }

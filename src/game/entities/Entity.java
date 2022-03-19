@@ -1,4 +1,4 @@
-package game;
+package game.entities;
 
 public abstract class Entity {
     protected int hp;
