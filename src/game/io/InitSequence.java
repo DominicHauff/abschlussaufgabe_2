@@ -1,6 +1,6 @@
 package game.io;
 
-import game.entities.CharacterClass;
+import game.entities.entityClasses.CharacterClass;
 
 import java.util.Scanner;
 

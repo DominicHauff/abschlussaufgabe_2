@@ -1,6 +1,6 @@
 package game.material.cards;
 
-import game.entities.EnemyClass;
+import game.entities.entityClasses.EnemyClass;
 import game.entities.Entity;
 import game.material.cards.abilities.DamageType;
 

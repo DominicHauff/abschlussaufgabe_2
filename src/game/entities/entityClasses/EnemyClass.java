@@ -1,4 +1,4 @@
-package game.entities;
+package game.entities.entityClasses;
 
 public enum EnemyClass {
     WATER,

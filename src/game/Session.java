@@ -1,16 +1,17 @@
 package game;
 
-import game.entities.CharacterClass;
+import game.entities.Enemy;
+import game.entities.entityClasses.CharacterClass;
 import game.entities.Player;
 import game.io.InitSequence;
 import game.io.Messages;
+import game.io.TransitionSequence;
 import game.material.PlayerAbilityCardSupplier;
 import game.material.cards.Card;
 import game.material.cards.abilities.AbilityCard;
 
 import java.util.Stack;
 import java.util.function.BiPredicate;
-import java.util.stream.IntStream;
 
 public class Session {
     private Player runa;
@@ -28,8 +29,10 @@ public class Session {
 
     public void runGame() {
         if (this.runa == null) return;
-        while (runa.checkLife() && !levels.isEmpty()) {
+        while (!levels.isEmpty()) {
             Level currentLevel = this.levels.pop();
+            if (!currentLevel.play(runa)) return;
+            TransitionSequence.run();
         }
     }
 
@@ -40,8 +43,11 @@ public class Session {
         if (characterClass == null) return;
 
         this.runa = new Player(characterClass, "Runa");
-        IntStream.range(1, numOfLevels).forEach(i -> this.levels.add(new Level(i, numOfStages)));
         this.cardSupplier.getAbilities().stream()
                 .filter(card -> filterCards.test(card, characterClass)).forEach(this.cardsToChoose::add);
+
+        for (int i = 1; i <= numOfLevels; i++) {
+            this.levels.push(new Level(i, numOfStages));
+        }
     }
 }

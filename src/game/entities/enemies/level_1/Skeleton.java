@@ -1,7 +1,7 @@
 package game.entities.enemies.level_1;
 
 import game.entities.Enemy;
-import game.entities.EnemyClass;
+import game.entities.entityClasses.EnemyClass;
 import game.material.cards.abilities.shared.Focus;
 import game.material.cards.abilities.shared.Lightning;
 

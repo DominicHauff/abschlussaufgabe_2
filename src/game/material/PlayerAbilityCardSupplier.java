@@ -18,7 +18,7 @@ public class PlayerAbilityCardSupplier {
     private final AbilityCard thrust = new Thrust();
     private final AbilityCard water = new Water();
 
-    public List<AbilityCard> getAbilities() {
+    public final List<AbilityCard> getAbilities() {
         return List.of(
                 focus,
                 parry,

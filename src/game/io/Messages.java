@@ -8,6 +8,10 @@ public abstract class Messages {
             2) Mage\s
             3) Paladin\s
             """;
+    public static final String SEED_PROMPT = """
+            To shuffle ability cards and monsters, enter two seeds
+            Enter seeds [1--2147483647] separated by comma:
+            """;
 
     public static String generateChoicePrompt(int first, int second) {
         return String.format("Enter number [%d--%d]:", first, second);

@@ -1,6 +1,6 @@
 package game.material.cards.abilities.shared;
 
-import game.entities.EnemyClass;
+import game.entities.entityClasses.EnemyClass;
 import game.material.cards.Effect;
 import game.material.cards.abilities.AbilityCard;
 import game.material.cards.abilities.DamageType;

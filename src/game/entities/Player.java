@@ -1,5 +1,6 @@
 package game.entities;
 
+import game.entities.entityClasses.CharacterClass;
 import game.material.cards.abilities.AbilityCard;
 
 import java.util.HashMap;

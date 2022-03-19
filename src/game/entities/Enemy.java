@@ -1,8 +1,8 @@
 package game.entities;
 
+import game.entities.entityClasses.EnemyClass;
 import game.material.cards.abilities.AbilityCard;
 
-import java.util.HashMap;
 import java.util.Stack;
 
 public abstract class Enemy extends Entity {
