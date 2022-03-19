@@ -13,9 +13,9 @@ public class Player extends Entity {
         this.hp = 50;
         this.focusPoints = 1;
         this.isAlive = true;
-        this.name = name;
         this.characterClass = characterClass;
         this.abilities = new HashMap<>();
         this.characterClass.getCards().forEach(card -> this.abilities.put(card.getName(), card));
+        this.setName(name);
     }
 }

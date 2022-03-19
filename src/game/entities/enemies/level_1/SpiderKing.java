@@ -2,12 +2,20 @@ package game.entities.enemies.level_1;
 
 import game.entities.Enemy;
 import game.entities.EnemyClass;
+import game.material.cards.abilities.enemyAbilities.Bite;
+import game.material.cards.abilities.enemyAbilities.Block;
+import game.material.cards.abilities.shared.Focus;
+import game.material.cards.abilities.shared.Lightning;
 
 public class SpiderKing extends Enemy {
-    private static final String NAME = "Spider King";
-
     public SpiderKing() {
-        super(EnemyClass.LIGHTNING, NAME);
-        this.hp = 50;
+        super(EnemyClass.LIGHTNING, 50);
+        this.setAbilities(
+                new Bite(),
+                new Block(),
+                new Focus(),
+                new Lightning()
+        );
+        this.setName("Spider King");
     }
 }

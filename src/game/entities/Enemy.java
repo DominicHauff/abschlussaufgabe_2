@@ -3,21 +3,28 @@ package game.entities;
 import game.material.cards.abilities.AbilityCard;
 
 import java.util.HashMap;
-import java.util.Map;
+import java.util.Stack;
 
 public abstract class Enemy extends Entity {
     private final EnemyClass enemyClass;
-    private Map<String, AbilityCard> abilities;
+    protected Stack<AbilityCard> abilities;
 
-    public Enemy(EnemyClass enemyClass, String name) {
+    public Enemy(EnemyClass enemyClass, int hp) {
         this.focusPoints = 0;
         this.isAlive = true;
-        this.name = name;
         this.enemyClass = enemyClass;
-        this.abilities = new HashMap<>();
+        this.abilities = new Stack<>();
+        this.hp = hp;
+        this.setName(name);
     }
 
     public EnemyClass getEnemyClass() {
         return this.enemyClass;
+    }
+
+    protected void setAbilities(AbilityCard... abilityCards) {
+        for (AbilityCard abilityCard : abilityCards) {
+            this.abilities.push(abilityCard);
+        }
     }
 }

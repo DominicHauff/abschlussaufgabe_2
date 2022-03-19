@@ -1,12 +1,16 @@
 package game.entities.enemies.level_1;
 
 import game.entities.Enemy;
+import game.material.cards.abilities.enemyAbilities.Deflect;
+import game.material.cards.abilities.enemyAbilities.Smash;
 
 public class Goblin extends Enemy {
-    private static final String NAME = "Goblin";
-
     public Goblin() {
-        super(null, NAME);
-        this.hp = 12;
+        super(null, 12);
+        this.setAbilities(
+                new Smash(),
+                new Deflect()
+        );
+        this.setName("Goblin");
     }
 }
