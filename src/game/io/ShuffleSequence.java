@@ -20,8 +20,8 @@ public class ShuffleSequence extends Sequence {
 
             seeds[0] = firstSeed;
             seeds[1] = secondSeed;
-        } catch (NumberFormatException e) {
-            run();
+        } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
+            return run();
         }
         return seeds;
     }

@@ -1,30 +1,31 @@
 package game;
 
-import game.entities.Enemy;
 import game.entities.entityClasses.CharacterClass;
 import game.entities.Player;
 import game.io.InitSequence;
 import game.io.Messages;
 import game.io.TransitionSequence;
-import game.material.PlayerAbilityCardSupplier;
+import game.material.LevelCardSupplier;
 import game.material.cards.Card;
 import game.material.cards.abilities.AbilityCard;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 import java.util.function.BiPredicate;
 
 public class Session {
     private Player runa;
     private final Stack<Level> levels;
-    private final Stack<AbilityCard> cardsToChoose;
-    private final PlayerAbilityCardSupplier cardSupplier;
+    private final List<AbilityCard> cardsToChoose;
+    private final LevelCardSupplier cardSupplier;
     private final BiPredicate<Card, CharacterClass> filterCards = (card, characterClass) ->
             characterClass.getCards().stream().anyMatch(owned -> owned.getName().equals(card.getName()));
 
     public Session() {
         this.levels = new Stack<>();
-        this.cardsToChoose = new Stack<>();
-        this.cardSupplier = new PlayerAbilityCardSupplier();
+        this.cardsToChoose = new ArrayList<>();
+        this.cardSupplier = new LevelCardSupplier();
     }
 
     public void runGame() {
@@ -32,7 +33,6 @@ public class Session {
         while (!levels.isEmpty()) {
             Level currentLevel = this.levels.pop();
             if (!currentLevel.play(runa)) return;
-            TransitionSequence.run();
         }
     }
 

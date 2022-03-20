@@ -17,11 +17,10 @@ public class InitSequence extends Sequence {
                 case (1): return CharacterClass.MAGE;
                 case (2) : return CharacterClass.WARRIOR;
                 case (3) : return CharacterClass.PALADIN;
-                default: run();
+                default: return run();
             }
         } catch (NumberFormatException e) {
-            run();
+            return run();
         }
-        return null;
     }
 }

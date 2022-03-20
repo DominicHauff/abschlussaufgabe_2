@@ -2,11 +2,11 @@ package game.io;
 
 public abstract class Messages {
     public static final String GREETING_PROMPT = """
-            Welcome to Runa's Strive\s
-             Select Runa's character class\s
-            1) Warrior\s
-            2) Mage\s
-            3) Paladin\s
+            Welcome to Runa's Strive
+             Select Runa's character class
+            1) Warrior
+            2) Mage
+            3) Paladin
             """;
     public static final String SEED_PROMPT = """
             To shuffle ability cards and monsters, enter two seeds
